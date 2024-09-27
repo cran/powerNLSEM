@@ -361,7 +361,7 @@ documentation linked in “Getting Started”.</p>
 <p>Load the package:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(powerNLSEM)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; Loading required package: ggplot2</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; Package &#39;powerNLSEM&#39; version 0.1.1</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; Package &#39;powerNLSEM&#39; version 0.1.2</span></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; Type &#39;citation(&quot;powerNLSEM&quot;)&#39; for citing this R package in publications.</span></span></code></pre></div>
 </div>
 <div id="write-model" class="section level2">
@@ -406,7 +406,7 @@ zero-effects for which the power is just the level of significance
 <code>lavaan</code> (version 0.6.13), which is why this is handeled by
 the <code>powerNLSEM</code> package by translating the syntax into
 syntax for which nonlinear models can be estimated. For now these are
-<code>LMS</code> (latent moderated structured equation, Klein &amp;
+<code>LMS</code> (latent moderated structural equations, Klein &amp;
 Moosbrugger, 2000), which needs an installation of <code>Mplus</code>
 (Muthén &amp; Muthén, 1998-2017), <code>UPI</code> (unconstrained
 product indicator approach, Marsh et al., 2004, Kelava &amp; Brandt,
@@ -528,7 +528,7 @@ following objects:</p>
 important information of the estimation with some visual highlights:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">summary</span>(Result_Power)</span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">#&gt; -----------------------------------------------------------------------------</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; Model-Implied Simulation-Based Power Estimation: powerNLSEM 0.1.1</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; Model-Implied Simulation-Based Power Estimation: powerNLSEM 0.1.2</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">#&gt; Parameters of Interest (POI):</span></span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="co">#&gt; Y~X, Y~Z, Y~X:Z</span></span>
@@ -632,7 +632,7 @@ and the desired alpha-error level (Type I error level: <span class="math inline"
 <span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="co">#&gt; [1] &quot;probit&quot;</span></span></code></pre></div>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>Result_Power<span class="sc">$</span>runtime</span>
 <span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="co">#&gt;    user  system elapsed </span></span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="co">#&gt;   4.644   0.063   4.732</span></span></code></pre></div>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="co">#&gt;   4.570   0.065   4.635</span></span></code></pre></div>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>Result_Power<span class="sc">$</span>seed <span class="co"># general seed</span></span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="co">#&gt; [1] 2024</span></span></code></pre></div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">head</span>(Result_Power<span class="sc">$</span>args<span class="sc">$</span>seeds) <span class="co"># seeds within each simulation</span></span>
@@ -863,11 +863,11 @@ overestimation becomes smaller.</p>
 <p>Irmer, J. P., Klein, A. G., &amp; Schermelleh-Engel, K. (2024a). A
 General Model-Implied Simulation-Based Power Estimation Method for
 Correctly and Misspecfied Models: Applications to Nonlinear and Linear
-Structural Equation Models. [Submitted for Publication] <a href="https://doi.org/10.31219/osf.io/pe5bj" class="uri">https://doi.org/10.31219/osf.io/pe5bj</a></p>
+Structural Equation Models. <em>Behavior Research Methods.</em> <a href="https://doi.org/10.31219/osf.io/pe5bj" class="uri">https://doi.org/10.31219/osf.io/pe5bj</a></p>
 <p>Irmer, J. P., Klein, A. G., &amp; Schermelleh-Engel, K. (2024b).
 Estimating Power in Complex Nonlinear Structural Equation Modeling
 Including Moderation Effects: The <code>powerNLSEM R</code>-Package.
-<em>Behavior Research Methods.</em></p>
+<em>Behavior Research Methods.</em> <a href="https://doi.org/10.3758/s13428-024-02476-3" class="uri">https://doi.org/10.3758/s13428-024-02476-3</a></p>
 <p>Jorgensen, T. D., Pornprasertmanit, S., Schoemann, A. M., &amp;
 Rosseel, Y. (2022). <em><code>semTools</code>: Useful tools for
 structural equation modeling</em>. R package version 0.5-6. Retrieved
